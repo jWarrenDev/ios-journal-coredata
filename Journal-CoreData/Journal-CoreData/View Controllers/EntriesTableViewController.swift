@@ -57,17 +57,18 @@ class EntriesTableViewController: UITableViewController, NSFetchedResultsControl
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            
             let entry = entryController.entries[indexPath.row]
             let moc = CoreDataStack.shared.mainContext
             moc.delete(entry)
             
             do {
                 try moc.save()
-                tableView.reloadData()
             }catch {
                 moc.reset()
             }
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }    
     }
     
