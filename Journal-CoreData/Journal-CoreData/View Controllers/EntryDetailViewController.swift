@@ -56,6 +56,11 @@ class EntryDetailViewController: UIViewController {
         
     }
     
+    @IBAction func moodSegmentedControl(_ sender: UISegmentedControl) {
+        
+    }
+    
+    
     
     // ? means "I don't need this to exist for my program to be correct"
     // ! means "This needs to exist for my program to be correct but

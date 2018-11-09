@@ -19,9 +19,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="OCI-vJ-lbs">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GDb-2z-kyG">
+                                    <rect key="frame" x="20" y="8" width="335" height="29"/>
+                                    <segments>
+                                        <segment title="😕"/>
+                                        <segment title="🤔"/>
+                                        <segment title="😁"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="moodSegmentedControl:" destination="pAb-EF-QGu" eventType="valueChanged" id="wgy-gV-b0m"/>
+                                    </connections>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="GDb-2z-kyG" secondAttribute="bottom" constant="8" id="EZb-jD-cRn"/>
+                                <constraint firstAttribute="trailing" secondItem="GDb-2z-kyG" secondAttribute="trailing" constant="20" id="lPn-z3-Wcr"/>
+                                <constraint firstItem="GDb-2z-kyG" firstAttribute="leading" secondItem="OCI-vJ-lbs" secondAttribute="leading" constant="20" id="rVI-hA-Kgq"/>
+                                <constraint firstItem="GDb-2z-kyG" firstAttribute="top" secondItem="OCI-vJ-lbs" secondAttribute="top" constant="8" id="uQw-lg-fLf"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="66" id="Ibz-5b-WNN" customClass="EntryTableViewCell" customModule="Journal_CoreData" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="66"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ibz-5b-WNN" id="ZG5-RU-RKC">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
@@ -35,7 +59,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTA-Lg-FEH">
                                                             <rect key="frame" x="0.0" y="0.0" width="287" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -88,6 +112,7 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSx-vT-5aP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pAb-EF-QGu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-412" y="-531.18440779610194"/>
         </scene>
@@ -120,7 +145,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="46G-pk-Dyn" firstAttribute="bottom" secondItem="5Xb-T0-VaG" secondAttribute="bottom" constant="94" id="Awk-sq-dOM"/>
                             <constraint firstItem="5Xb-T0-VaG" firstAttribute="leading" secondItem="46G-pk-Dyn" secondAttribute="leading" constant="16" id="HeW-EO-789"/>
