@@ -34,6 +34,7 @@
 		47A0BEE621932EF500991EFA /* Journal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Journal.xcdatamodel; sourceTree = "<group>"; };
 		47A0BEE821932F6200991EFA /* Entry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Convenience.swift"; sourceTree = "<group>"; };
 		47A0BEEA2193327300991EFA /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		47B35C8721951CC70000416D /* Journal 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Journal 3.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,11 +71,9 @@
 				47A0BECF2192474100991EFA /* Main.storyboard */,
 				47B35C852193A4210000416D /* View Controllers */,
 				47B35C862193A4350000416D /* Model + Controller */,
-				47A0BEDF2192514900991EFA /* EntryTableViewCell.swift */,
 				47A0BED22192474300991EFA /* Assets.xcassets */,
 				47A0BED42192474300991EFA /* LaunchScreen.storyboard */,
 				47A0BED72192474300991EFA /* Info.plist */,
-				47A0BEE821932F6200991EFA /* Entry+Convenience.swift */,
 			);
 			path = "Journal-CoreData";
 			sourceTree = "<group>";
@@ -82,6 +81,7 @@
 		47B35C852193A4210000416D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				47A0BEDF2192514900991EFA /* EntryTableViewCell.swift */,
 				47A0BEE121925A1D00991EFA /* EntryDetailViewController.swift */,
 				47A0BEDD2192513400991EFA /* EntriesTableViewController.swift */,
 			);
@@ -91,9 +91,10 @@
 		47B35C862193A4350000416D /* Model + Controller */ = {
 			isa = PBXGroup;
 			children = (
+				47A0BEEA2193327300991EFA /* EntryController.swift */,
+				47A0BEE821932F6200991EFA /* Entry+Convenience.swift */,
 				47A0BEE321932EA500991EFA /* CoreDataStack.swift */,
 				47A0BEE521932EF500991EFA /* Journal.xcdatamodeld */,
-				47A0BEEA2193327300991EFA /* EntryController.swift */,
 			);
 			path = "Model + Controller";
 			sourceTree = "<group>";
@@ -381,9 +382,10 @@
 		47A0BEE521932EF500991EFA /* Journal.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				47B35C8721951CC70000416D /* Journal 3.xcdatamodel */,
 				47A0BEE621932EF500991EFA /* Journal.xcdatamodel */,
 			);
-			currentVersion = 47A0BEE621932EF500991EFA /* Journal.xcdatamodel */;
+			currentVersion = 47B35C8721951CC70000416D /* Journal 3.xcdatamodel */;
 			path = Journal.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

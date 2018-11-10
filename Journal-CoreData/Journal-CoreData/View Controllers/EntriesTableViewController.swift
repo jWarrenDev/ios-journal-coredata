@@ -89,6 +89,28 @@ class EntriesTableViewController: UITableViewController, NSFetchedResultsControl
     
     let entryController = EntryController()
     
-   // lazy var 
+    
+    // MARK: - FRC
+    
+    // here are the objects I want to display
+    // observe the managegeObjectContext for changes
+    // if object edit, deleted, or moved.
+    // can split the data in separate options
+    
+    lazy var fetchResultsController: NSFetchedResultsController<Entry> = {
+        // create a fetch request
+        // must provide sortDiscriptors - what order the results should return into
+        let fetchRequest: NSFetchRequest<Entry> = Entry.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        let moc = CoreDataStack.shared.mainContext
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                             managedObjectContext: moc,
+                                             sectionNameKeyPath: nil,
+                                             cacheName: nil)
+        frc.delegate = self
+        try! frc.performFetch()
+        return frc
+    }()
     
 }
+
